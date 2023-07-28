@@ -9,17 +9,18 @@ createApp({
             counter: null,
         }
     },
-    mounted(){
+    
+    methods: {},
 
+    mounted() {
         for (let i = 0; i < 10; i++) {
             this.counter++;
-            console.log(this.counter)
             axios
-            .get("https://flynn.boolean.careers/exercises/api/random/mail")
-            .then(axiosResp =>{
-                if(this.counter = 10)
-            })
+                .get("https://flynn.boolean.careers/exercises/api/random/mail")
+                .then(axiosResp => {   
+                    this.mailList.push(axiosResp.data.response)
+                })
         }
-        
     }
-}).mount('#app')
+    }
+).mount('#app')
