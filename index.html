@@ -15,11 +15,11 @@
 <body>
     <div id="app">
         <head>
-            <h1 class="text-center p-5">E-mail Generator</h1>
+            <h1 class="text-center p-5 display-1">E-mail Generator</h1>
         </head>
         <main class="p-5">
             <ul v-if="mailList.length > 9">
-                <li v-for="singleMail in mailList">{{singleMail}}</li>
+                <li class="py-2 fw-medium fs-3" v-for="singleMail in mailList">{{singleMail}}</li>
             </ul>
         </main>
     </div>
